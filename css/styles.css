@@ -1,0 +1,918 @@
+@import url("../css/semantic.min.css");
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    font-family:"Lato", sans-serif;
+    
+}
+
+section {
+    min-height:100vh;
+    padding:10rem 0;
+    overflow: hidden;
+}
+
+
+h1 {
+    font-size:calc(2rem + 2vw);
+    text-transform:uppercase;
+    font-weight:900;
+    font-family:"Muli",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height:1.25;
+}
+
+h2 {
+    font-family:"Montserrat", sans-serif;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+h3 {
+    font-size:calc(0.75rem + 0.75vw);
+    text-transform:uppercase;
+    margin-bottom:0;
+}
+
+.features-block h3 {
+    font-size:1.1rem;
+    margin-bottom:2rem;    
+}
+
+
+h1::before {
+    content:"";
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    background-color:hsl(54, 100%, 50%);
+    position: absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.header-content-block p {
+    font-size:0.8rem;
+    line-height:2;
+}
+
+.section-title p {
+    color:hsl(0, 0%, 45%);
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content::after {
+    content:"";
+    width:10rem;
+    height:10rem;
+    border-radius:50%;
+    background-color:hsl(54, 100%, 50%);
+    position: absolute;
+    top:0;
+    right:0;
+    z-index:-1;
+}
+
+.content {
+    display:grid;
+    align-items:center;
+    grid-template-columns: repeat(12,1fr);
+    position:relative;
+
+}
+
+.header-content {
+    min-height:100vh;
+    
+}
+
+.header-content::after {
+    content: "";
+    width: 75vh;
+    height: 75vh;
+    border: calc(2.5rem + 5vw) solid hsl(54, 100%, 50%);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: 75vw;
+    top: 1rem;
+    z-index: -1;
+}
+
+.header-content::before {
+    content: "";
+    width: 25vh;
+    height: 25vh;
+    border: calc(1rem + 2.5vw) solid hsl(54, 100%, 50%);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: 50vw;
+    bottom: 20vh;
+    z-index: -1;
+}
+
+.header-content-block {
+    grid-column:span 12;
+    position:relative;
+}
+
+.header-content-block:first-child {
+    width:75%;
+    margin:0 auto;
+    grid-column:span 7;
+}
+
+.header-content-block:last-child {
+    align-self:end;
+}
+
+
+.menu {
+    display:grid;
+    align-items:center;
+    justify-items:stretch;
+
+    grid-column:span 12;
+    align-self:end;
+    height:15vh;
+    background-color: hsl(0, 0%, 16%);
+
+}
+
+.menu-content {
+    margin:0 auto;
+    width:75%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-items:center;
+    grid-gap:1rem;
+}
+
+.menu a {
+    color:hsl(0, 0%, 95%);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    color:hsl(54, 100%, 50%);
+    transition: 0.5s;
+}
+
+.header-content .ui.button {
+    background:transparent;
+    border:1px solid hsl(0, 0%, 16%);
+    text-transform:uppercase;
+    padding:1rem 3rem;
+    border-radius:0;
+}
+
+img {
+    width:100%;
+    display: inherit;
+}
+
+/*ABOUT*/
+
+.about {
+    background-image:url("../img/ipad.png");
+    background-position:100% 75%;
+    background-repeat:no-repeat;
+    background-size:25%;
+}
+
+
+.section-title, .about-buttons, .about-numbers, .who-we-are-buttons {
+    grid-column:span 12;
+    text-align:center;
+}
+
+.section-title h2::before {
+    font-size:calc(2.5rem + 2.5vw);;
+    text-transform:uppercase;
+    font-weight:900;
+    color:hsla(0, 0%, 85%, 0.75);
+    position: absolute;
+    top:-1.2rem;
+    z-index:-1;
+}
+
+.about .section-title h2::before {
+    content:"About";
+    left:27.5vw;
+}
+
+.about-numbers .section-title h2::before {
+    content:"";
+}
+
+.responsive-content .section-title h2::before {
+    content:"Responsive";
+    left:0;
+}
+
+.services-content .section-title h2::before {
+    content:"Service";
+    left:45vw;
+}
+
+
+.pricing-content .section-title h2::before {
+    content:"Pricing";
+    left: 25vw;
+    color:hsl(54, 100%, 45%);
+
+}
+
+.features-content .section-title h2::before {
+    content:"Features";
+    left: 25vw;
+}
+
+.portofolio-content .section-title h2::before {
+    content:"Work";
+    left: 41vw;
+    top:9vw;
+    color:hsl(54, 100%, 45%);
+    z-index:-1;
+}
+
+.news .section-title h2::before {
+    content:"News";
+    left: 29vw;
+}
+
+.contact .section-title h2::before {
+    content:"Contact";
+    left: 25vw;
+}
+
+.about-content::before {
+    content: "";
+    width: 100vh;
+    height: 100vh;
+    border: calc(2.5rem + 5vw) solid hsl(54, 100%, 50%);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: -25vw;
+    top: 25vh;
+    z-index: -1;
+}
+
+.section-title .logo {
+    width:15%;
+    margin:0 auto;
+}
+
+
+.about-buttons {
+    margin:4rem 0;
+}
+
+.about-buttons .ui.button:first-child {
+    background-color:hsl(0, 0%, 16%);
+    color:hsl(54, 100%, 50%);
+    padding:1rem 3rem;
+}
+
+.who-we-are .ui.button {
+    background-color:transparent;
+    color:hsl(0, 0%, 95%);
+    border:1px solid hsl(0, 0%, 95%);
+    padding:1rem 3rem;
+    width:15rem;
+}
+
+.who-we-are .ui.button:hover {
+    color:hsl(0, 0%, 16%);
+    background-color:hsl(54, 100%, 50%);
+    transition:0.5s;
+}
+
+.about-buttons .ui.button:last-child {
+    color:hsl(0, 0%, 16%);
+    background-color:hsl(54, 100%, 50%);
+    padding:1rem 3rem;
+}
+
+.about-block {
+    grid-column:span 4;
+    min-height:25rem;
+    background-color:hsl(0, 0%, 16%);
+    color:hsl(0, 0%, 95%);
+    font-family:"Montserrat", sans-serif;
+    font-weight:700;
+
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.about-block:hover {
+    background-color:hsl(54, 100%, 50%);
+    color:hsl(0, 0%, 5%);
+    transition:0.5s;
+}
+
+.about-block i {
+    color:hsl(54, 100%, 50%);
+    font-size:6rem;
+}
+
+.about-block-content {
+    text-align:center;
+}
+
+.about-content, .responsive-content, .who-we-are-content, .features-content, .services-content, .pricing-content,
+.experts-content, .news-content, .contact-content, .footer-content {
+    width:75%;
+    margin:0 auto;
+    grid-gap:2rem;
+    position:relative;
+}
+
+.about-numbers {
+    display:grid;
+    justify-items:center;
+    margin:4rem 0;
+}
+
+.numbers-block {
+    grid-column:span 3;
+    margin-top:calc(4rem + 4vw);
+    line-height:0.5;
+}
+
+.about-numbers h3 {
+    font-size:calc(2rem + 1vw);
+    font-weight:900;
+}
+
+.numbers-block p{
+    font-size:0.75rem;
+}
+
+/*Responsive */
+
+.responsive {
+    background-image:url("../img/Layer 8.png");
+    background-size:auto;
+    background-repeat:no-repeat;
+    background-position:80% 45%;
+    position: relative;
+}
+
+.responsive-content::before {
+    content: "";
+    width: 50vh;
+    height: 50vh;
+    border: calc(2.5rem + 2.5vw) solid hsl(54, 100%, 50%);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: 42vw;
+    top: 20vh;
+    z-index: -1;
+}
+
+.responsive-content .section-title {
+    grid-column:span 6;
+    text-align:left;
+}
+
+.responsive-list {
+    grid-column:1/span 6;
+    padding:0;
+}
+
+ul {
+    position:relative;
+}
+
+li i {
+    margin-right:1rem;
+    color:#757575;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom:1.5rem;
+    position:relative;
+}
+
+.responsive-content .ui.button {
+    grid-column:1/span 6;
+    justify-self:start;
+    color:hsl(0, 0%, 16%);
+    background-color:hsl(54, 100%, 50%);    
+}
+
+/*WHO WE ARE*/
+
+.who-we-are {
+    background-image:linear-gradient(to right, hsla(0, 0%, 20%, 0.75), hsl(0, 0%, 20%, 0.9)), url("../img/background-girl.jpg");
+    min-height:auto;
+    background-size:cover;
+}
+
+.who-we-are h2 {
+    color:hsl(0, 0%, 95%);
+}
+
+.who-we-are p  {
+    color:hsl(0, 0%, 95%);
+    width:75%;
+    margin:0 auto;
+}
+
+/*Features*/
+
+.features-block {
+    display:grid;
+    grid-template-columns:1fr 4fr;
+    grid-column:span 4;
+    grid-gap:1rem;
+    margin-bottom:4rem;
+}
+
+.icon-container {
+    width:4.25rem;
+    height:4.25rem;
+    background-color:hsl(168, 44%, 62%);
+    color:hsl(0, 0%, 95%);
+    border-radius:50%;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    font-size:2rem;
+}
+
+.features-block:nth-child(3) .icon-container {
+    background-color:hsl(199, 75%, 54%);
+}
+
+.features-block:nth-child(4) .icon-container {
+    background-color:hsl(285, 50%, 68%);
+}
+
+.features-block:nth-child(5) .icon-container {
+    background-color:hsl(349, 75%, 69%);
+}
+
+.features-block:nth-child(6) .icon-container {
+    background-color:hsl(168, 44%, 62%);
+}
+
+.features-block:nth-child(7) .icon-container {
+    background-color:hsl(199, 75%, 54%);
+}
+
+/*Folio*/
+
+.portofolio-content {
+    z-index:1;
+}
+
+.portofolio .section-title {
+    padding:10rem 0 5rem 0;
+    background-color: hsl(54, 100%, 50%);
+    z-index: 1;
+}
+
+.portofolio-buttons {
+    grid-column:span 12;
+    margin:4rem auto;
+}
+
+.portofolio-buttons .ui.button {
+    background-color:transparent;
+    border:2px solid hsla(0, 0%, 5%, 0.95);
+    color:hsla(0, 0%, 5%, 0.95);
+}
+
+.portofolio-buttons .ui.button:hover {
+    color:hsl(54, 100%, 50%);
+    background-color:hsla(0, 0%, 5%, 0.95);
+    transition:0.5s;
+}
+
+.portofolio-photo {
+    grid-column:span 12;
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+    align-self:end;
+}
+
+.portofolio-photo .card {
+    grid-column:span 3;
+}
+
+.portofolio-photo h3 {
+    display:inline-block;
+    font-size:1rem;
+    margin:0 1rem;
+}
+
+.portofolio-photo .dimmer-content {
+    width:95%;
+    text-align:left;
+}
+
+.portofolio-content .ui.dimmer {
+    height:20%;
+    bottom: 0;
+    background-color:hsla(30, 7%, 89%, 0.95);
+    padding:1rem 0;
+    white-space: nowrap;
+}
+
+.experts-content .ui.dimmer {
+    background-color:hsl(54, 100%, 45%);
+}
+
+.portfolio .portofolio-content .dimmer-content {
+    display:grid;
+    align-items:center;
+    width:95%;
+    grid-template-columns:3fr 1fr 1fr 1fr;
+    text-align:left;
+    position:relative;   
+}
+
+.experts .dimmer-content {
+    height:100%;
+    display:grid;
+}
+
+.portfolio .dimmer-content h3 {
+    font-size:1rem;
+}
+
+.dimmer-content .ui.button {
+    width:3rem;
+    height:3rem;
+    position:absolute;
+    border-radius:50%;
+    padding:1rem;
+    border:1px solid hsl(0, 0%, 5%);
+}
+
+.search {
+    right:0;
+    top:-2rem;
+}
+
+.ui.button.search {
+    background-color:hsl(54, 100%, 50%);
+}
+
+.link {
+    right:4rem;
+    top:-2rem;
+}
+
+.services-content-content {
+    grid-column: 7/span 6;
+    display: grid;
+    grid-gap:2rem;
+}
+
+.services-content-content .section-title, .news .section-title, .features .section-title, .contact .section-title {
+    margin-bottom:10vw;
+}
+
+.services-block {
+    grid-column:span 6;
+    text-align:center;
+}
+
+.services-block i {
+    font-size:2rem;
+    margin:2rem 0;
+}
+
+.services-block h3 {
+    margin:0;
+    margin-bottom:2rem;
+}
+
+.services {
+    background-image:url("../img/team-back.png");
+    background-repeat:no-repeat;
+    background-size:50%;
+    background-position:bottom left;
+}
+
+.services-content::before {
+    content: "";
+    width: 50vw;
+    height: 50vw;
+    border: calc(2.5rem + 2.5vw) solid hsla(54, 100%, 50%, 0.5);
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    left: -40vw;
+    bottom: -35vw;
+    z-index: 1;
+}
+
+.pricing-content {
+    z-index:1;
+}
+
+.pricing-block, .news-block, .footer-block {
+    grid-column:span 4;
+}
+
+.pricing {
+    background-image:linear-gradient(to right, hsla(54, 100%, 50%,0.75), hsl(54, 100%, 50%, 0.9)),url("../img/pricing-bg.jpg")
+}
+
+.pricing-block-header {
+    background-size:cover;
+    background-image:linear-gradient(to right, hsla(0, 0%, 20%, 0.75), hsl(0, 0%, 20%, 0.9)), url("../img/background-girl.jpg");
+    padding:2rem;
+    text-align:center;
+    color:hsla(30, 7%, 89%, 0.95);
+}
+
+.pricing-block-header h3 {
+    font-size: calc(2rem + 2.5vw);;
+}
+
+.pricing-block-header p {
+    font-size:1rem;
+    text-transform:uppercase;
+
+}
+
+.pricing-block-header span {
+    font-size:0.75rem;
+    text-transform:uppercase;
+}
+
+sup {
+    font-size:2rem;
+}
+
+.pricing-block ul {
+    background-color:hsl(0, 0%, 95%);
+    padding:0;
+    margin:0;
+}
+
+.pricing-block ul li {
+    padding:1rem 3rem;
+    margin-bottom:0;
+    text-align:center;
+    border-bottom:1px solid hsl(0, 0%, 45%);
+}
+
+.pricing-block ul li:last-child {
+    border:0;
+}
+
+.pricing-block .ui.button {
+    width:100%;
+    background-color:hsl(0, 0%, 95%);
+    margin:0.25rem 0;
+}
+
+.contact .ui.button {
+    background-color:hsl(54, 100%, 50%);
+    color:hsl(0, 0%, 5%);
+}
+
+/*Experts*/
+
+.experts-block {
+    grid-column:span 4;
+}
+
+.experts-txt {
+    background-color:hsl(0, 0%, 90%);
+    text-align:center;
+    text-transform:uppercase;
+    padding:2rem 0;
+}
+
+.experts-txt h3 {
+    padding-bottom:2rem;
+    border-bottom:1px dotted hsl(0, 0%, 45%);
+    
+}
+
+.experts-txt p {
+    padding-top:2rem;
+}
+
+.experts .dimer-content-title {
+    padding:4rem 0;
+}
+
+
+
+.social-block {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    align-self: end;
+}
+
+.impressed {
+    background-image:linear-gradient(to right, hsla(0, 0%, 20%, 0.75), hsl(0, 0%, 20%, 0.9)), url("../img/blx-h-p01.jpg");
+}
+
+.news {
+    position:relative;
+}
+
+.news-block {
+    grid-column:span 3;
+    text-align:center;
+}
+
+.news-block p {
+    margin:2rem 0;
+}
+
+.date {
+    background-color:hsl(0, 0%, 95%);
+    padding:0.5rem 1rem;
+    border-radius:10%;
+    width:50%;
+    margin:0 auto;
+    position:relative;
+    top:-1rem;
+}
+
+
+.ui.form {
+    grid-column:span 12;
+    grid-gap:1rem;
+}
+
+input {
+    width:50%;
+}
+
+.field {
+    grid-column:span 6;
+}
+
+.field.text {
+    grid-column:span 12;
+}
+
+.ui.form .field>label {
+    display:none;
+}
+
+.contact {
+    background-image:linear-gradient(to right, hsla(0, 0%, 97.5%, 0.75), hsl(0, 0%, 99%, 0.9)),
+                     url("../img/bg-map.png");
+    background-size:cover;
+}
+
+
+footer {
+    background-color:hsl(0, 0%, 15%);
+    color:hsl(0, 0%, 85%);
+}
+
+.footer-content {
+    min-height:15vh;
+}
+
+.phone {
+    text-align:center;
+    
+}
+
+.phone i {
+    display:inline-block;
+    padding:1rem;
+
+    margin:1rem 0;
+}
+
+.phone small {
+    display:block;
+}
+
+@media screen and (max-width:768px) {
+    .about-content, .responsive-content, .features-content, .services-content, .pricing-content, .experts-content,
+    .news-content, .footer-content, .contacts-content {
+        width:95%;
+    }
+
+    .about .section-title h2::before {
+        left:35vw;
+    }
+
+    .services .section-title h2::before {
+        left:20vw;
+    }
+
+    .responsive {
+        background:none;
+    }
+
+    .features-block, .portofolio-photo .card {
+        grid-column:span 6;
+    }
+
+    .services-content-content {
+        grid-column:span 12;
+    }
+
+    .services-content::before {
+        left:25vw;
+        bottom:-55vw;
+    }
+
+    .services, .about {
+        background-image:none;
+    }
+
+    .services .section-title h2::before {
+        left:31vw;
+    }
+
+    .portofolio-content .section-title h2::before {
+        left:37vw;
+        top:16vw;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .about-block, .responsive-content .section-title, .features-block, .portofolio-photo .card, .pricing-block {
+        grid-column:span 12;
+    }
+
+    .pricing-block ul li {
+        padding:1rem;
+    }
+
+    .experts .dimer-content-title {
+        padding:0;
+    }
+
+    .news-block {
+        grid-column:span 6;
+    }
+
+    .contact-content {
+        width:95%;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+    .header-content-block:first-child {
+        grid-column:span 12;
+    }
+
+    .about .section-title h2::before {
+        left:27vw;
+    }
+
+    .about-buttons .ui.button:last-child {
+        background-color:hsl(0, 0%, 16%);
+        color:hsl(54, 100%, 50%);
+    }
+
+    .about-numbers h3 {
+        font-size:2rem;
+    }
+
+    .who-we-are-buttons .ui.button {
+        margin:0.5rem 0;
+    }
+
+    .who-we-are-content {
+        width:95%;
+    }
+
+    .portofolio-buttons .ui.button:last-child {
+        display:none;
+    }
+
+    .experts-block, .news-block, .footer-block {
+        grid-column:span 12;
+    }
+
+    .social-block {
+        text-align:center;
+    }
+
+
+}
